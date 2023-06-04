@@ -1,17 +1,69 @@
-/*let a, b, c;
-a=3;
-b="Mi hola mundo";
-alert(b);
-console.log("Digite el valor para la variable c: ");
-c=prompt();
+class lista extends HTMLElement{
+  constructor(){
+    super();
+    this.nombreTer;
+    this.interMenor;
+    this.interMayor;
+    this.escala;
+  }
 
+  static get observerAttributes(){
+    return['nombreTer', 'interMenor', 'interMayor', 'escala'];
+  }
 
-function mostrarValores(){
-    alert(a + b + c);
+  attributeChangeCallback(nameAtr, oldValue, newValue){
+    switch(nameAtr){
+      case "nombreTer":
+        this.nombreTer = newValue;
+      break;
+
+      case "interMenor":
+        this.interMenor = newValue;
+      break;
+      
+      case "interMayor":
+        this.interMayor = newValue;
+      break;
+
+      case "escala":
+        this.escala = newValue;
+      break;
+    }
+  }
+
+  connectedCallback(){
+    this.innerHTML = `<div class = "vista" id="Termo">
+
+    <div class="botones">
+        <h3> Nombre del Termómetro: </h3>
+        <input type="text" id="mostrarNom" value="${this.nombreTer}">
+    </div>   
+
+    <div class="botones">
+        <h3> La temperatura del Termómetro es: </h3>
+        <input type="text" id="grados">
+    </div>
+
+    <input type="range" id="temperatura" min="${this.interMenor}" max="${this.interMayor}" step="${this.escala}" value="0">
+        <!--<div id="termometro">
+            <div id="indicador"></div>
+        </div>
+
+    </div>-->
+
+    <div class="vista" id="infoTermo">
+        <h3> Estado de conexión <input id="Estado"> </h3>
+        <h3>Dirección IP: <input type="number"></h3>
+        <h3>Puerto: <input type="number"></h3>
+        <div class="botones"><button class="btnConexion"> Conectar </button> <button class="btnConexion"> Desconectar </button></div>
+    </div>
+</div>`;
+  }
+
 }
 
-mostrarValores();
-*/
+window.customElements.define("nuevo-termo", lista);
+
 
 const input = document.getElementById("temperatura");
 const indicador = document.getElementById("indicador");
@@ -19,16 +71,21 @@ const indicador = document.getElementById("indicador");
 let nombreTer, interMenor, interMayor, escala;
 
 function guardarInfo(){
-    nombreTer = document.getElementById("nombreTer").value;
-    interMenor = document.getElementById("interMenor").value;
-    interMayor = document.getElementById("interMayor").value;
-    escala = document.getElementById("escala").value;
 
-    document.getElementById("mostrarNom").value = nombreTer;
+  const termos=[];
+
+  termos[0] = document.getElementById("nombreTer").value;
+  termos[1] = document.getElementById("interMenor").value;
+  termos[2] = document.getElementById("interMayor").value;
+  termos[3] = document.getElementById("escala").value;
+
+  document.getElementById("mostrarNom").value = termos[0];
 
     input.setAttribute("min", interMenor);
     input.setAttribute("max", interMayor);
     input.setAttribute("step", escala);
+
+    clear();
 
 }
 
