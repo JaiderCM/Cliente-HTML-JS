@@ -7,10 +7,11 @@ class holaMundo extends HTMLElement{
       this.b;
       this.c;
       this.d;
+      this.e
   }
 
   static get observedAttributes(){
-      return ['a', "b", "c", "d"];
+      return ['a', "b", "c", "d", "e"];
   }
 
   attributeChangedCallback(nameAttr, oldValue, newValue){
@@ -27,6 +28,9 @@ class holaMundo extends HTMLElement{
           case "d":
             this.d = newValue;
           break;
+          case "e":
+            this.e = newValue;
+          break;
       }
   }
 
@@ -39,10 +43,10 @@ class holaMundo extends HTMLElement{
 
   <div class="botones">
       <h3> La temperatura del Termómetro es: </h3>
-      <input type="text" id="grados">
+      <input type="text" id="grados${this.e}">
   </div>
 
-  <input type="range" id="temperatura''++''" min="${this.b}" max="${this.c}" step="${this.d}" value="0" onchange="grados()">
+  <input type="range" id="temperatura${this.e}" min="${this.b}" max="${this.c}" step="${this.d}" value="0" onchange="grados(${this.e})">
   </div>
   <div class="vista" id="infoTermo">
   <h3> Estado de conexión <input id="Estado"> </h3>
@@ -80,18 +84,21 @@ function guardarInfo(){
 
     
 
-    document.getElementById('Termo').innerHTML += '<nuevo-termo a="'+termos[0]+'" b="'+termos[1]+'" c="'+termos[2]+'" d="'+termos[3]+'"></nuevo-termo>';
+    document.getElementById('Termo').innerHTML += '<nuevo-termo a="'+termos[0]+'" b="'+termos[1]+'" c="'+termos[2]+'" d="'+termos[3]+'" e="'+ac+'"></nuevo-termo>';
 
     clear();
 
 }
 
-input.addEventListener("input", () => {
+/*input.addEventListener("input", () => {
   document.getElementById("grados").value = input.value;
   const value = input.value;
   indicador.style.height = value + "px";
-});
+});*/
 
+function grados(num){
+  document.getElementById("grados"+num).value = document.getElementById("temperatura"+num).value;
+}
 function clear(){
   document.getElementById("nombreTer").value = "";
   document.getElementById("interMenor").value = "";
