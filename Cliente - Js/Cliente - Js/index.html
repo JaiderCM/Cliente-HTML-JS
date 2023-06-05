@@ -9,70 +9,70 @@
     <title>Termometro</title>
 </head>
 <body >
-        <div class = "main">
-            <!--<header id="Arriba"> </header>-->
-            <header id="Titulo">Controlador de Termómetro</header>
-            <br></br>
-            <div class="container">
-                <aside class = "vista" id="Principal">
-                    <h2>Sensor de Temperatura</h2>
-                    <h3>Ingrese el nombre del Termómetro: </h3>
+    <div class = "main">
+        <!--<header id="Arriba"> </header>-->
+        <header id="Titulo">Controlador de Termómetro</header>
+        <br></br>
+        <div class="container">
+            <aside class = "vista" id="Principal">
+                <h2>Sensor de Temperatura</h2>
+                <h3>Ingrese el nombre del Termómetro: </h3>
 
-                    <input type="text" id="nombreTer">
+                <input type="text" id="nombreTer">
 
-                    <h3> Ingrese los intervalos del Termómetro:</h3>
+                <h3> Ingrese los intervalos del Termómetro:</h3>
 
-                    <div class="inter">
-                        <input type="number" id="interMenor"> - <input type="number" id="interMayor">
-                    </div>
+                <div class="inter">
+                    <input type="number" id="interMenor"> - <input type="number" id="interMayor">
+                </div>
 
-                    <h3> Ingrese la escala de Termómetro:</h3>
-                    <input type="number" id="escala">
+                <h3> Ingrese la escala de Termómetro:</h3>
+                <input type="number" id="escala">
 
-                    <center><button id="btnGuardar" onclick="guardarInfo()"> Guardar </button></center>
-                </aside>
+                <center><button id="btnGuardar" onclick="guardarInfo()"> Guardar </button></center>
+            </aside>
 
-                <div class="vista" id="Termo">
+            <div class="vista" id="Termo">
 
-                    <!--<div class="botones">
-                        <h3> Nombre del Termómetro: </h3>
-                        <input type="text" id="mostrarNom">
-                    </div>
+                <!--<div class="botones">
+                    <h3> Nombre del Termómetro: </h3>
+                    <input type="text" id="mostrarNom">
+                </div>
 
-                    <div class="botones">
-                        <h3> La temperatura del Termómetro es: </h3>
-                        <input type="text" id="grados">
-                    </div>
+                <div class="botones">
+                    <h3> La temperatura del Termómetro es: </h3>
+                    <input type="text" id="grados">
+                </div>
 
-                    <input type="range" id="temperatura" min="0" max="100" step="1" value="0">
+                <input type="range" id="temperatura" min="0" max="100" step="1" value="0">
 
 
-                    <div class="vista" id="infoTermo">
-                        <h3> Estado de conexión <input id="Estado"> </h3>
-                        <h3>Dirección IP: <input type="number"></h3>
-                        <h3>Puerto: <input type="number"></h3>
-                        <div class="botones"><button class="btnConexion"> Conectar </button> <button class="btnConexion"> Desconectar </button></div>
-                    </div>
+                <div class="vista" id="infoTermo">
+                    <h3> Estado de conexión <input id="Estado"> </h3>
+                    <h3>Dirección IP: <input type="number"></h3>
+                    <h3>Puerto: <input type="number"></h3>
+                    <div class="botones"><button class="btnConexion"> Conectar </button> <button class="btnConexion"> Desconectar </button></div>
                 </div>-->
+            
                 <nuevo-termo a="ter 1" b="0" c="100" d="1"></nuevo-termo>
-
-            </div>
-        </br>
-            <div class = "vista" id="Info">
-                <h1>Sensor de Temperatura</h1>
-                <h3>¿Por qué tener sensores de temperatura en su hogar?</h3>
-                <p> Hay varias razones por las que tener sensores de temperatura en tu hogar puede ser beneficioso:
-                    <ol>
-                        <b><li></b>Ahorro de energía: Al monitorear la temperatura en diferentes habitaciones de tu hogar, puedes ajustar el termostato de tu sistema de calefacción y aire acondicionado para que solo se use la energía necesaria. Esto puede ayudarte a ahorrar en tus facturas de energía. </li>
-                        <li>Confort y bienestar: Mantener una temperatura constante en tu hogar puede aumentar tu confort y bienestar. Si la temperatura es demasiado alta o demasiado baja, puede afectar tu salud, tu sueño y tu capacidad para realizar tareas cotidianas.</li>
-                        <li>Detección de problemas: Un sensor de temperatura puede ayudarte a detectar problemas en tu hogar antes de que se conviertan en problemas mayores. Por ejemplo, si una habitación está mucho más fría que las demás, puede ser un signo de una fuga de aire o problemas con el aislamiento.</li>
-                        <li>Protección de tu hogar: Si tienes plantas, animales o electrodomésticos sensibles a la temperatura, un sensor de temperatura puede ayudarte a protegerlos al alertarte si la temperatura en tu hogar está fuera de un rango seguro. </li>
-                    </ol>
-                </p>
-            </div>
-
-            <footer> © Universidad Distrital Francisco José de Caldas</footer>
+            </div>    
         </div>
+    </br>
+        <div class = "vista" id="Info">
+            <h1>Sensor de Temperatura</h1>
+            <h3>¿Por qué tener sensores de temperatura en su hogar?</h3>
+            <p> Hay varias razones por las que tener sensores de temperatura en tu hogar puede ser beneficioso:
+                <ol>
+                    <b><li></b>Ahorro de energía: Al monitorear la temperatura en diferentes habitaciones de tu hogar, puedes ajustar el termostato de tu sistema de calefacción y aire acondicionado para que solo se use la energía necesaria. Esto puede ayudarte a ahorrar en tus facturas de energía. </li>
+                    <li>Confort y bienestar: Mantener una temperatura constante en tu hogar puede aumentar tu confort y bienestar. Si la temperatura es demasiado alta o demasiado baja, puede afectar tu salud, tu sueño y tu capacidad para realizar tareas cotidianas.</li>
+                    <li>Detección de problemas: Un sensor de temperatura puede ayudarte a detectar problemas en tu hogar antes de que se conviertan en problemas mayores. Por ejemplo, si una habitación está mucho más fría que las demás, puede ser un signo de una fuga de aire o problemas con el aislamiento.</li>
+                    <li>Protección de tu hogar: Si tienes plantas, animales o electrodomésticos sensibles a la temperatura, un sensor de temperatura puede ayudarte a protegerlos al alertarte si la temperatura en tu hogar está fuera de un rango seguro. </li>
+                </ol>
+            </p>
+        </div>
+    </div>
 
+    <footer> © Universidad Distrital Francisco José de Caldas</footer>
+    
 </body>
 </html>

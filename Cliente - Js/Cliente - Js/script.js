@@ -41,7 +41,15 @@ class holaMundo extends HTMLElement{
   </div>
 
   <input type="range" id="temperatura" min="${this.b}" max="${this.c}" step="${this.d}" value="0">
-  </div></div>`;
+  </div>
+  <div class="vista" id="infoTermo">
+  <h3> Estado de conexión <input id="Estado"> </h3>
+  <h3>Dirección IP: <input type="number"></h3>
+  <h3>Puerto: <input type="number"></h3>
+  <div class="botones"><button class="btnConexion"> Conectar </button> <button class="btnConexion"> Desconectar </button></div>
+  </div>
+  </div>`;
+
 
   }
 }

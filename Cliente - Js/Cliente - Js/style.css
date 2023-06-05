@@ -8,6 +8,9 @@ body{
   background: rgb(0, 0, 0);
   background: radial-gradient(circle at center, rgba(14, 44, 64, 0.5) 23%, rgba(26, 74, 90, 0.5), rgba(20, 141, 141, 0.5), rgba(193, 225, 167, 0.5), rgba(239, 188, 117, 0.5) 100%);
   background: url(Fondo3.jpg);
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .espacio{
@@ -57,13 +60,19 @@ aside{
 }
 
 #Termo{
+  margin: 0;
+  width: 60%;
+}
+nuevo-termo{
+  border: #005BBB solid;
   margin-top: 0px;
   text-align: left;
-  width: 70%;
-  height: auto;
-  line-height: 15px;
+  width: 100%;
+  height: 700px;
+  line-height: 70px;
   display: grid;
   align-items: stretch;
+  
 }
 
 .temperature{
@@ -87,6 +96,7 @@ ol{
 #Info{
   margin-top: 20px;
   width: 1100px;
+  position: float;
 }
 
 #Estado{
@@ -197,6 +207,7 @@ footer{
   background-color: gray;
   line-height: 60px;
   text-align: center;
+  margin-top: auto;
 }
 
 #temperatura{
