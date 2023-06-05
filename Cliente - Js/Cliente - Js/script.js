@@ -29,8 +29,8 @@ class holaMundo extends HTMLElement{
   }
 
   connectedCallback(){
-      this.innerHTML = `<div>
-      <div class="botones">
+      this.innerHTML = `<div class="vista">
+  <div class="botones">
       <h3> Nombre del Termómetro: </h3>
       <input type="text" id="mostrarNom" value="${this.a}">
   </div>
@@ -84,11 +84,11 @@ function guardarInfo(){
 
 }
 
-/*input.addEventListener("input", () => {
+input.addEventListener("input", () => {
   document.getElementById("grados").value = input.value;
   const value = input.value;
   indicador.style.height = value + "px";
-});*/
+});
 
 function clear(){
   document.getElementById("nombreTer").value = "";
