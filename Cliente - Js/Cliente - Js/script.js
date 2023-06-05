@@ -1,3 +1,5 @@
+let ac = 0;
+
 class holaMundo extends HTMLElement{
   constructor(){
       super();
@@ -40,7 +42,7 @@ class holaMundo extends HTMLElement{
       <input type="text" id="grados">
   </div>
 
-  <input type="range" id="temperatura" min="${this.b}" max="${this.c}" step="${this.d}" value="0">
+  <input type="range" id="temperatura''++''" min="${this.b}" max="${this.c}" step="${this.d}" value="0" onchange="grados()">
   </div>
   <div class="vista" id="infoTermo">
   <h3> Estado de conexión <input id="Estado"> </h3>
@@ -65,7 +67,7 @@ let nombreTer, interMenor, interMayor, escala;
 function guardarInfo(){
 
   const termos=[];
-
+  ac = ac+1;
   termos[0] = document.getElementById("nombreTer").value;
   termos[1] = document.getElementById("interMenor").value;
   termos[2] = document.getElementById("interMayor").value;
